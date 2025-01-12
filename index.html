@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Hive</title>
+    <link rel="stylesheet" href="log-in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="form-contanier">
+        <h2>Sign-in</h2>
+        <form>
+            <input type="text" placeholder="username" required name="username" id="username"><br>
+            <input type="password" placeholder="password" required name="password" id="password"><br>
+            <div class="button-log-in">
+                <button type="submit" value="Log-In" id="submit">Log In</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer (Now outside the form container) -->
+    <footer class="footer">
+        <p>© 2025 إدارة الموارد البشرية - جميع الحقوق محفوظة.</p>
+    </footer>
+    <script>
+       
+
+       document.getElementById("submit").addEventListener("click", function () {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "hossam" && password === "8520") {
+        window.location.href = "hrfile23939382497932793h34342.html";
+    } else if (username === "guest" && password === "134679") {
+        window.location.href = "hrfile23939382497932793g34342.html";
+    } else {
+        alert("Wrong username or password");
+    }
+
+    // إعادة تعيين الحقول
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+});
+
+    </script>
+</body>
+</html>

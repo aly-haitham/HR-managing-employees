@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>إدارة الموظفين</title>       
+</head>
+<body>
+    <main>
+        <h1>إدارة الموظفين</h1>
+
+        <form id="employeeForm" action="process_form.php" method="post">
+            <!-- باقي الحقول كما هي -->
+            <label for="id">الرقم التعريفي:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="qualification">المؤهل العلمي:</label>
+            <input type="text" id="qualification" name="qualification" required>
+
+            <label for="graduationYear">سنة الحصول على المؤهل:</label>
+            <input type="number" id="graduationYear" name="graduationYear" required>
+
+            <label for="phone">رقم التليفون:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="address">العنوان:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="initialAssignment">جهة التكليف الأولي:</label>
+            <input type="text" id="initialAssignment" name="initialAssignment" required>
+
+            <label for="initialAssignmentFrom">من تاريخ:</label>
+            <input type="date" id="initialAssignmentFrom" name="initialAssignmentFrom" required>
+
+            <label for="initialAssignmentTo">إلى تاريخ:</label>
+            <input type="date" id="initialAssignmentTo" name="initialAssignmentTo" required>
+
+            <label for="secondAssignment">جهة التكليف الثانية:</label>
+            <input type="text" id="secondAssignment" name="secondAssignment">
+
+            <label for="secondAssignmentFrom">من تاريخ:</label>
+            <input type="date" id="secondAssignmentFrom" name="secondAssignmentFrom">
+
+            <label for="secondAssignmentTo">إلى تاريخ:</label>
+            <input type="date" id="secondAssignmentTo" name="secondAssignmentTo">
+
+            <label for="ministerialDecisionNumber">رقم القرار الوزاري بالاستعانة:</label>
+            <input type="text" id="ministerialDecisionNumber" name="ministerialDecisionNumber" required>
+
+            <label for="ministerialDecisionDate">تاريخ القرار الوزاري بالاستعانة:</label>
+            <input type="date" id="ministerialDecisionDate" name="ministerialDecisionDate" required>
+
+            <label for="currentWorkplace">جهة العمل الحالية:</label>
+            <input type="text" id="currentWorkplace" name="currentWorkplace" required>
+
+            <label for="workStartDate">تاريخ استلام العمل:</label>
+            <input type="date" id="workStartDate" name="workStartDate" required>
+
+            <label for="terminationDecisionText">قرار إلغاء الاستعانة:</label>
+            <input type="text" id="terminationDecisionText" name="terminationDecisionText">
+            
+            <label for="terminationDecisionDate">تاريخ إلغاء الاستعانة:</label>
+            <input type="date" id="terminationDecisionDate" name="terminationDecisionDate">
+            
+            
+
+
+            <button type="submit" name="submit" id="submitButton">إضافة الموظف</button>
+        </form>
+
+        <!-- البحث عن موظف -->
+<div class="search">
+    <label for="searchInput" class="searchLabel">بحث عن موظف :</label>
+    <input type="text" id="searchInput" class="searchInput" placeholder="بحث عن موظف">
+    <button class="searchButton" onclick="searchEmployee()">بحث</button>
+</div>
+
+
+        <div id="employeeTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>الرقم التعريفي</th>
+                        <th>الاسم</th>
+                        <th>المؤهل العلمي</th>
+                        <th>سنة الحصول على المؤهل</th>
+                        <th>التقرير</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- الموظفون سيتم عرضهم هنا -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="report">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 إدارة الموارد البشرية - جميع الحقوق محفوظة.</p>
+    </footer>
+
+   <script src="java-Hossam.js"></script>
+</body>
+</html>

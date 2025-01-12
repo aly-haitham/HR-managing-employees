@@ -1,0 +1,287 @@
+    body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #eaf0f1;
+                margin: 0;
+                padding: 0;
+                direction: rtl;
+                color: #34495e;
+            }
+            
+            header {
+                background-color: #1abc9c;
+                color: white;
+                padding: 20px 0;
+                text-align: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            header h1 {
+                font-size: 2.5rem;
+                margin: 0;
+            }
+            
+            main {
+                margin: 40px auto;
+                max-width: 1000px;
+                padding: 20px;
+            }
+            
+            form {
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                margin-bottom: 40px;
+            }
+            
+            form label {
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+                color: #2c3e50;
+            }
+            
+            form input, form select, form button {
+                width: 100%;
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                border-radius: 10px;
+                border: 1px solid #bdc3c7;
+                box-sizing: border-box;
+            }
+            
+            form button {
+                background-color: #2ecc71;
+                color: white;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            
+            form button:hover {
+                background-color: #27ae60;
+            }
+            
+            #employeeTable {
+                background-color: #fff;
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
+            
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            
+            table th, table td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #e1e1e1;
+                font-size: 1.1rem;
+                transition: background-color 0.3s ease;
+            }
+            
+            table th {
+                background-color: #1abc9c;
+                color: white;
+            }
+            
+            table td {
+                background-color: #ecf0f1;
+            }
+            
+            table tr:hover td {
+                background-color: #f4f6f9;
+            }
+            
+            table button {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                cursor: pointer;
+                font-size: 0.9rem;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+            
+            table button:hover {
+                background-color: #c0392b;
+            }
+            
+            .search {
+                display: flex;
+                justify-content: center;
+                margin: 20px 0;
+                gap: 15px;
+            }
+            
+            .searchLabel {
+                color: #2980b9;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            
+            .searchInput {
+                padding: 12px;
+                font-size: 1.1rem;
+                border-radius: 8px;
+                border: 1px solid #bdc3c7;
+                width: 70%;
+            }
+            
+            .searchButton {
+                padding: 12px 20px;
+                background-color: #2ecc71;
+                border: 1px solid #2ecc71;
+                color: white;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1.1rem;
+                transition: background-color 0.3s ease;
+            }
+            
+            .searchButton:hover {
+                background-color: #27ae60;
+                border-color: #27ae60;
+            }
+            
+            footer {
+                background-color: #34495e;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+                margin-top: 40px;
+                box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            footer p {
+                margin: 0;
+                font-size: 1rem;
+            }
+            
+            #report {
+                margin-top: 20px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            
+            .report-header {
+                font-size: 1.8rem;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            #report-buttons 
+            {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 1.4em;
+            outline: none;
+            border-style: none;
+            border-radius: 14px;
+            cursor: pointer;
+            background-color:#e74c3c;
+            color:white;
+            font-weight: bolder;
+            }
+            
+            #report-buttons:hover{
+                background-color:#c0392b ;
+            }
+
+
+
+        
+        @media print {
+    body {
+        font-size: 0.8rem; /* Reduce overall font size */
+        line-height: 1.4;
+    }
+
+    /* Remove extra spacing and margins for print */
+    .searchInput, .searchLabel, .searchButton, footer, h1, #employeeForm, #employeeTable {
+        display: none;
+    }
+
+    /* Ensure the report section takes full page width and height */
+    #report {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+
+    /* Control table and content spacing */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8rem;
+    }
+
+    table th, table td {
+        padding: 8px;
+        text-align: left;
+        font-size: 0.9rem; /* Smaller font for table cells */
+    }
+
+    .report-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Adjusting column spacing */
+    table td, table th {
+        padding: 10px;
+    }
+
+    /* Remove table borders and make them lighter */
+    table th {
+        background-color: #1abc9c;
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    table td {
+        background-color: #ecf0f1;
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    table tr {
+        page-break-inside: avoid; /* Prevent breaking inside a row */
+    }
+
+    /* Adjust button styles for printing */
+    .no-print {
+        display: none;
+    }
+
+    /* Hide report buttons during printing */
+    #report-buttons {
+        display: none;
+    }
+
+    /* Make page content fit into a smaller space */
+    @page {
+        margin: 10mm;
+    }
+}
